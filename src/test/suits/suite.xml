@@ -1,0 +1,35 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite thread-count="3" verbose="1" name="EndProject" annotations="JDK" parallel="tests">
+
+<!--    <test name="SuccessfulLoginTest">-->
+<!--        <classes>-->
+<!--            <class name="AutomationQA.SuccessfulLoginTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="UnsuccessfulLoginTest">-->
+<!--        <classes>-->
+<!--            <class name="AutomationQA.UnsuccessfulLoginTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+    <test name="AddItemsToCartTest">
+        <classes>
+            <class name="AutomationQA.AddItemToCartTest"/>
+        </classes>
+    </test>
+
+    <test name="CheckOutItemsTest">
+        <classes>
+            <class name="AutomationQA.CheckOutItemsTest"/>
+        </classes>
+    </test>
+
+    <test name="ProblemUserTest">
+        <classes>
+            <class name="AutomationQA.ProblemUserTest"/>
+        </classes>
+    </test>
+
+</suite>
