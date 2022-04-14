@@ -21,10 +21,11 @@ public class UnsuccessfulLoginTest extends TestUtil {
     }
 
     @Test (dataProvider = "WrongUserList")
-    public void unsuccesfullLoginTest(String userName, String password) {
+    public void unsuccesfullLoginTest(String userName, String password) throws InterruptedException {
 
         LoginPage loginPage = new LoginPage(driver);
         ProductsPage productsPage = loginPage.login(userName, password);
+        Thread.sleep(500);
 
         WebElement errorMessage = driver.findElement(By.xpath("//*[text()='Epic sadface: Username and password do not match any user in this service']"));
         Assert.assertTrue(errorMessage.isDisplayed());
